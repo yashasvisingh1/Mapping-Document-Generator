@@ -45,7 +45,7 @@ pip install -r requirements.txt
 
 6. Create a Groq API key:
 
-7. Go to `https://console.groq.com/keys` and sign in.
+7. Go to [Groq Console Keys](https://console.groq.com/keys) and sign in.
 8. Click `Create API Key`.
 9. Enter a name for the key and create it.
 10. Copy the key immediately (you may not be able to view it again).
@@ -56,6 +56,14 @@ pip install -r requirements.txt
 GROQ_API_KEY=your_groq_api_key_here
 GROQ_MODEL=llama-3.3-70b-versatile
 GROQ_API_BASE=https://api.groq.com/openai/v1
+```
+
+## Quick Start
+
+Run all three agents in one command:
+
+```powershell
+python run_agents.py all --input "sample_sql_tables_documentation.docx" --tables-output "output/tables" --sql-output "output/sql" --mapping-output "output/mappings"
 ```
 
 ## Run Commands
@@ -106,6 +114,6 @@ python run_agents.py all --input "sample_sql_tables_documentation.docx" --tables
 
 ## Notes
 
-- SQL extraction and mapping generation call Groq Chat Completions API.
+- SQL extraction and mapping generation call [Groq Chat Completions API](https://console.groq.com/docs/api-reference#chat-create).
 - Table extraction is deterministic via `python-docx` and does not use LLM inference.
 - File names are sanitized and made unique automatically.
