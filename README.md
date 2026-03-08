@@ -41,10 +41,16 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-5. Create your environment file:
+5. Create your environment file(.env file).
 
+6. Create a Groq API key:
 
-6. Edit `.env` and set at least:
+7. Go to `https://console.groq.com/keys` and sign in.
+8. Click `Create API Key`.
+9. Enter a name for the key and create it.
+10. Copy the key immediately (you may not be able to view it again).
+
+11. Edit `.env` and set at least:
 
 ```env
 GROQ_API_KEY=your_groq_api_key_here
