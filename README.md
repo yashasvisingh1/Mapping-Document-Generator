@@ -43,9 +43,6 @@ pip install -r requirements.txt
 
 5. Create your environment file:
 
-```powershell
-Copy-Item .env.example .env
-```
 
 6. Edit `.env` and set at least:
 
